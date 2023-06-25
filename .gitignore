@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+#Folders
+MDB\ShiftingLogic_ert_rtw
