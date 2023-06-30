@@ -36,4 +36,8 @@ void IOinput::FastCyclic()
     {
         IOInputs_MaxGearLimit.MaxGearLimit++;
     }
+    //Serial.print("Shit Up Request : ");
+    //Serial.println(IOInputs_ShiftUpRequest.ShiftUpRequest);
+    //Serial.print("Shit Down Request : ");
+    //Serial.println(IOInputs_ShiftDownRequest.ShiftDownRequest);
 }

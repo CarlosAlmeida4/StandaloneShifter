@@ -30,8 +30,8 @@ void loop() {
 void Task1MS()
 {
   IOinput_obj.FastCyclic();
-  ShiftingLogic_Obj.setMax_Gear_Limit(IOinput_obj.IOInputs_MaxGearLimit.MaxGearLimit);
-  ShiftingLogic_Obj.setReset_Count(IOinput_obj.IOInputs_ResetCount.ResetCount);
+  ShiftingLogic_Obj.setMax_Gear_Limit(/*IOinput_obj.IOInputs_MaxGearLimit.MaxGearLimit*/MAXGEARDEFAULT_VALUE);
+  ShiftingLogic_Obj.setReset_Count(0);
   ShiftingLogic_Obj.setShift_down_request(IOinput_obj.IOInputs_ShiftDownRequest.ShiftDownRequest);
   ShiftingLogic_Obj.setShift_UP_request(IOinput_obj.IOInputs_ShiftUpRequest.ShiftUpRequest);
   ShiftingLogic_Obj.step();
