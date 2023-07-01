@@ -3,11 +3,11 @@
 
 #include "Arduino.h"
 
-#define MAXGEARUP_PIN 1
-#define MAXGEARDOWN_PIN 5
+#define MAXGEARUP_PIN 4
+#define MAXGEARDOWN_PIN 3
 #define SHIFTUPREQUEST_PIN 6
 #define SHIFTDOWNREQUEST_PIN 7
-#define RESETCOUNT_PIN 4
+#define RESETCOUNT_PIN 5
 #define MAXGEARDEFAULT_VALUE 6
 
 class IOinput
