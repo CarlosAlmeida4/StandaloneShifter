@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ShiftingLogic'.
 //
-// Model version                  : 1.16
+// Model version                  : 1.18
 // Simulink Coder version         : 9.8 (R2022b) 13-May-2022
-// C/C++ source code generated on : Sun Jun 25 23:04:35 2023
+// C/C++ source code generated on : Sat Jul  1 18:20:37 2023
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Atmel->AVR

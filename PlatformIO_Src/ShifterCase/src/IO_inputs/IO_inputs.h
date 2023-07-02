@@ -25,7 +25,8 @@ class IOinput
         {
             uint8_t MaxGearUpPin;
             uint8_t MaxGearDownPin;
-            uint8_t MaxGearLimit;
+            uint8_t MaxGearLimitUp;
+            uint8_t MaxGearLimitDown;
         };
         struct IOInputs_ShiftUpRequest_type
         {

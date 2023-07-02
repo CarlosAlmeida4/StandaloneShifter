@@ -18,7 +18,6 @@ void IOinput::InitInputs()
     pinMode(IOInputs_ShiftDownRequest.ShiftDownRequestPin,INPUT);
     pinMode(IOInputs_ResetCount.ResetCountPin,INPUT);
 
-    IOInputs_MaxGearLimit.MaxGearLimit = MAXGEARDEFAULT_VALUE;
     IOInputs_ShiftUpRequest.ShiftUpRequest = 0;
     IOInputs_ShiftDownRequest.ShiftDownRequest = 0;
     IOInputs_ResetCount.ResetCount = 0;
@@ -32,7 +31,8 @@ void IOinput::FastCyclic()
     IOInputs_ShiftUpRequest.ShiftUpRequest = digitalRead(IOInputs_ShiftUpRequest.ShiftUpRequestPin);
     IOInputs_ShiftDownRequest.ShiftDownRequest = digitalRead(IOInputs_ShiftDownRequest.ShiftDownRequestPin);
     IOInputs_ResetCount.ResetCount = digitalRead(IOInputs_ResetCount.ResetCountPin);
-
+    IOInputs_MaxGearLimit.MaxGearLimitUp = digitalRead(IOInputs_MaxGearLimit.MaxGearUpPin);
+    IOInputs_MaxGearLimit.MaxGearLimitDown = digitalRead(IOInputs_MaxGearLimit.MaxGearDownPin);
     //Serial.print("Shit Up Request : ");
     //Serial.println(IOInputs_ShiftUpRequest.ShiftUpRequest);
     //Serial.print("Shit Down Request : ");
