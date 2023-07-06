@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ShiftingLogic'.
 //
-// Model version                  : 1.18
-// Simulink Coder version         : 9.8 (R2022b) 13-May-2022
-// C/C++ source code generated on : Sat Jul  1 18:20:37 2023
+// Model version                  : 2.0
+// Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
+// C/C++ source code generated on : Fri Jul  7 00:09:03 2023
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Atmel->AVR
@@ -21,82 +21,82 @@
 // Block parameters (default storage)
 ShiftingLogic::P_ShiftingLogic_T ShiftingLogic::ShiftingLogic_P{
   // Variable: AbsoluteMaxGear
-  //  Referenced by: '<S11>/Saturation'
+  //  Referenced by: '<S10>/Saturation'
 
   30.0,
 
   // Expression: 0
-  //  Referenced by: '<S5>/Constant2'
+  //  Referenced by: '<S4>/Constant2'
 
   0.0,
 
   // Expression: 0
-  //  Referenced by: '<S5>/Constant1'
+  //  Referenced by: '<S4>/Constant1'
 
   0.0,
 
   // Expression: 0
-  //  Referenced by: '<S12>/Constant'
+  //  Referenced by: '<S11>/Constant'
 
   0.0,
 
   // Expression: 0
-  //  Referenced by: '<S9>/Constant2'
+  //  Referenced by: '<S8>/Constant2'
 
   0.0,
 
   // Expression: 0
-  //  Referenced by: '<S9>/Constant1'
+  //  Referenced by: '<S8>/Constant1'
 
   0.0,
 
   // Expression: -1
-  //  Referenced by: '<S11>/Saturation'
+  //  Referenced by: '<S10>/Saturation'
 
   -1.0,
 
   // Computed Parameter: Delay_InitialCondition
-  //  Referenced by: '<S13>/Delay'
+  //  Referenced by: '<S12>/Delay'
 
   true,
 
   // Computed Parameter: Delay_InitialCondition_i
-  //  Referenced by: '<S14>/Delay'
+  //  Referenced by: '<S13>/Delay'
 
   true,
 
   // Computed Parameter: Delay_InitialCondition_c
-  //  Referenced by: '<S7>/Delay'
+  //  Referenced by: '<S6>/Delay'
 
   true,
 
   // Computed Parameter: Delay_InitialCondition_h
-  //  Referenced by: '<S8>/Delay'
+  //  Referenced by: '<S7>/Delay'
 
   true,
 
   // Computed Parameter: CurrentGearMemory_InitialCondit
-  //  Referenced by: '<S4>/Current Gear Memory'
+  //  Referenced by: '<S3>/Current Gear Memory'
 
   0,
 
   // Computed Parameter: Switch_Threshold
-  //  Referenced by: '<S12>/Switch'
+  //  Referenced by: '<S11>/Switch'
 
   0U,
 
   // Computed Parameter: MaxGearMemory_InitialCondition
-  //  Referenced by: '<S3>/Max Gear Memory'
+  //  Referenced by: '<S2>/Max Gear Memory'
 
   0U,
 
   // Computed Parameter: Saturation_UpperSat
-  //  Referenced by: '<S3>/Saturation'
+  //  Referenced by: '<S2>/Saturation'
 
   20U,
 
   // Computed Parameter: Saturation_LowerSat_o
-  //  Referenced by: '<S3>/Saturation'
+  //  Referenced by: '<S2>/Saturation'
 
   1U
 };

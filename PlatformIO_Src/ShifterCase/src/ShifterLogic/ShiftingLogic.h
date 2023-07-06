@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ShiftingLogic'.
 //
-// Model version                  : 1.18
-// Simulink Coder version         : 9.8 (R2022b) 13-May-2022
-// C/C++ source code generated on : Sat Jul  1 18:20:37 2023
+// Model version                  : 2.0
+// Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
+// C/C++ source code generated on : Fri Jul  7 00:09:03 2023
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Atmel->AVR
@@ -19,8 +19,7 @@
 #ifndef RTW_HEADER_ShiftingLogic_h_
 #define RTW_HEADER_ShiftingLogic_h_
 #include "rtwtypes.h"
-#include "rtw_continuous.h"
-#include "rtw_solver.h"
+
 #include "ShiftingLogic_types.h"
 
 // Macros for accessing real-time model data structure
@@ -39,53 +38,53 @@ class ShiftingLogic final
  public:
   // Block signals (default storage)
   struct B_ShiftingLogic_T {
-    real_T Switch;                     // '<S5>/Switch'
-    real_T Switch1;                    // '<S5>/Switch1'
-    real_T Switch1_c;                  // '<S9>/Switch1'
-    real_T Switch_n;                   // '<S9>/Switch'
-    real_T RequestedGear;              // '<S4>/Add'
-    real_T Saturation;                 // '<S11>/Saturation'
-    real_T Switch_h;                   // '<S15>/Switch'
-    uint8_T Cast;                      // '<S3>/Cast'
-    uint8_T Cast1;                     // '<S3>/Cast1'
-    uint8_T MaxGearMemory;             // '<S3>/Max Gear Memory'
-    uint8_T MaxGear;                   // '<S3>/Add'
-    uint8_T Saturation_m;              // '<S3>/Saturation'
-    uint8_T Cast_i;                    // '<S10>/Cast'
-    uint8_T Cast1_f;                   // '<S10>/Cast1'
-    uint8_T Cast_k;                    // '<S6>/Cast'
-    uint8_T Cast1_b;                   // '<S6>/Cast1'
-    int8_T Switch_i;                   // '<S12>/Switch'
-    boolean_T LogicalOperator;         // '<S5>/Logical Operator'
-    boolean_T CastToBoolean;           // '<S6>/Cast To Boolean'
-    boolean_T Delay;                   // '<S7>/Delay'
-    boolean_T CastToBoolean1;          // '<S6>/Cast To Boolean1'
-    boolean_T Delay_a;                 // '<S8>/Delay'
-    boolean_T CastToBoolean_f;         // '<S10>/Cast To Boolean'
-    boolean_T Delay_g;                 // '<S13>/Delay'
-    boolean_T CastToBoolean1_p;        // '<S10>/Cast To Boolean1'
-    boolean_T Delay_n;                 // '<S14>/Delay'
-    boolean_T LogicalOperator_m;       // '<S9>/Logical Operator'
-    boolean_T RelationalOperator;      // '<S15>/Relational Operator'
-    boolean_T LogicalOperator_o;       // '<S13>/Logical Operator'
-    boolean_T LogicalOperator1;        // '<S13>/Logical Operator1'
-    boolean_T LogicalOperator_i;       // '<S14>/Logical Operator'
-    boolean_T LogicalOperator1_o;      // '<S14>/Logical Operator1'
-    boolean_T LogicalOperator_e;       // '<S7>/Logical Operator'
-    boolean_T LogicalOperator1_k;      // '<S7>/Logical Operator1'
-    boolean_T LogicalOperator_op;      // '<S8>/Logical Operator'
-    boolean_T LogicalOperator1_d;      // '<S8>/Logical Operator1'
+    real_T Switch;                     // '<S4>/Switch'
+    real_T Switch1;                    // '<S4>/Switch1'
+    real_T Switch1_c;                  // '<S8>/Switch1'
+    real_T Switch_n;                   // '<S8>/Switch'
+    real_T RequestedGear;              // '<S3>/Add'
+    real_T Saturation;                 // '<S10>/Saturation'
+    real_T Switch_h;                   // '<S14>/Switch'
+    uint8_T Cast;                      // '<S2>/Cast'
+    uint8_T Cast1;                     // '<S2>/Cast1'
+    uint8_T MaxGearMemory;             // '<S2>/Max Gear Memory'
+    uint8_T MaxGear;                   // '<S2>/Add'
+    uint8_T Saturation_m;              // '<S2>/Saturation'
+    uint8_T Cast_i;                    // '<S9>/Cast'
+    uint8_T Cast1_f;                   // '<S9>/Cast1'
+    uint8_T Cast_k;                    // '<S5>/Cast'
+    uint8_T Cast1_b;                   // '<S5>/Cast1'
+    int8_T Switch_i;                   // '<S11>/Switch'
+    boolean_T LogicalOperator;         // '<S4>/Logical Operator'
+    boolean_T CastToBoolean;           // '<S5>/Cast To Boolean'
+    boolean_T Delay;                   // '<S6>/Delay'
+    boolean_T CastToBoolean1;          // '<S5>/Cast To Boolean1'
+    boolean_T Delay_a;                 // '<S7>/Delay'
+    boolean_T CastToBoolean_f;         // '<S9>/Cast To Boolean'
+    boolean_T Delay_g;                 // '<S12>/Delay'
+    boolean_T CastToBoolean1_p;        // '<S9>/Cast To Boolean1'
+    boolean_T Delay_n;                 // '<S13>/Delay'
+    boolean_T LogicalOperator_m;       // '<S8>/Logical Operator'
+    boolean_T RelationalOperator;      // '<S14>/Relational Operator'
+    boolean_T LogicalOperator_o;       // '<S12>/Logical Operator'
+    boolean_T LogicalOperator1;        // '<S12>/Logical Operator1'
+    boolean_T LogicalOperator_i;       // '<S13>/Logical Operator'
+    boolean_T LogicalOperator1_o;      // '<S13>/Logical Operator1'
+    boolean_T LogicalOperator_e;       // '<S6>/Logical Operator'
+    boolean_T LogicalOperator1_k;      // '<S6>/Logical Operator1'
+    boolean_T LogicalOperator_op;      // '<S7>/Logical Operator'
+    boolean_T LogicalOperator1_d;      // '<S7>/Logical Operator1'
   };
 
   // Block states (default storage) for system '<Root>'
   struct DW_ShiftingLogic_T {
-    real_T Add_DWORK1;                 // '<S4>/Add'
-    int8_T CurrentGearMemory_DSTATE;   // '<S4>/Current Gear Memory'
-    uint8_T MaxGearMemory_DSTATE;      // '<S3>/Max Gear Memory'
-    boolean_T Delay_DSTATE;            // '<S7>/Delay'
-    boolean_T Delay_DSTATE_d;          // '<S8>/Delay'
-    boolean_T Delay_DSTATE_m;          // '<S13>/Delay'
-    boolean_T Delay_DSTATE_l;          // '<S14>/Delay'
+    real_T Add_DWORK1;                 // '<S3>/Add'
+    int8_T CurrentGearMemory_DSTATE;   // '<S3>/Current Gear Memory'
+    uint8_T MaxGearMemory_DSTATE;      // '<S2>/Max Gear Memory'
+    boolean_T Delay_DSTATE;            // '<S6>/Delay'
+    boolean_T Delay_DSTATE_d;          // '<S7>/Delay'
+    boolean_T Delay_DSTATE_m;          // '<S12>/Delay'
+    boolean_T Delay_DSTATE_l;          // '<S13>/Delay'
   };
 
   // External inputs (root inport signals with default storage)
@@ -105,58 +104,58 @@ class ShiftingLogic final
   // Parameters (default storage)
   struct P_ShiftingLogic_T {
     real_T AbsoluteMaxGear;            // Variable: AbsoluteMaxGear
-                                          //  Referenced by: '<S11>/Saturation'
+                                          //  Referenced by: '<S10>/Saturation'
 
     real_T Constant2_Value;            // Expression: 0
-                                          //  Referenced by: '<S5>/Constant2'
+                                          //  Referenced by: '<S4>/Constant2'
 
     real_T Constant1_Value;            // Expression: 0
-                                          //  Referenced by: '<S5>/Constant1'
+                                          //  Referenced by: '<S4>/Constant1'
 
     real_T Constant_Value;             // Expression: 0
-                                          //  Referenced by: '<S12>/Constant'
+                                          //  Referenced by: '<S11>/Constant'
 
     real_T Constant2_Value_n;          // Expression: 0
-                                          //  Referenced by: '<S9>/Constant2'
+                                          //  Referenced by: '<S8>/Constant2'
 
     real_T Constant1_Value_b;          // Expression: 0
-                                          //  Referenced by: '<S9>/Constant1'
+                                          //  Referenced by: '<S8>/Constant1'
 
     real_T Saturation_LowerSat;        // Expression: -1
-                                          //  Referenced by: '<S11>/Saturation'
+                                          //  Referenced by: '<S10>/Saturation'
 
     boolean_T Delay_InitialCondition;
                                    // Computed Parameter: Delay_InitialCondition
-                                      //  Referenced by: '<S13>/Delay'
+                                      //  Referenced by: '<S12>/Delay'
 
     boolean_T Delay_InitialCondition_i;
                                  // Computed Parameter: Delay_InitialCondition_i
-                                    //  Referenced by: '<S14>/Delay'
+                                    //  Referenced by: '<S13>/Delay'
 
     boolean_T Delay_InitialCondition_c;
                                  // Computed Parameter: Delay_InitialCondition_c
-                                    //  Referenced by: '<S7>/Delay'
+                                    //  Referenced by: '<S6>/Delay'
 
     boolean_T Delay_InitialCondition_h;
                                  // Computed Parameter: Delay_InitialCondition_h
-                                    //  Referenced by: '<S8>/Delay'
+                                    //  Referenced by: '<S7>/Delay'
 
     int8_T CurrentGearMemory_InitialCondit;
                           // Computed Parameter: CurrentGearMemory_InitialCondit
-                             //  Referenced by: '<S4>/Current Gear Memory'
+                             //  Referenced by: '<S3>/Current Gear Memory'
 
     uint8_T Switch_Threshold;          // Computed Parameter: Switch_Threshold
-                                          //  Referenced by: '<S12>/Switch'
+                                          //  Referenced by: '<S11>/Switch'
 
     uint8_T MaxGearMemory_InitialCondition;
                            // Computed Parameter: MaxGearMemory_InitialCondition
-                              //  Referenced by: '<S3>/Max Gear Memory'
+                              //  Referenced by: '<S2>/Max Gear Memory'
 
     uint8_T Saturation_UpperSat;      // Computed Parameter: Saturation_UpperSat
-                                         //  Referenced by: '<S3>/Saturation'
+                                         //  Referenced by: '<S2>/Saturation'
 
     uint8_T Saturation_LowerSat_o;  // Computed Parameter: Saturation_LowerSat_o
-                                       //  Referenced by: '<S3>/Saturation'
+                                       //  Referenced by: '<S2>/Saturation'
 
   };
 
@@ -182,9 +181,6 @@ class ShiftingLogic final
 
   // External inputs
   ExtU_ShiftingLogic_T ShiftingLogic_U;
-
-  // External outputs
-  ExtY_ShiftingLogic_T ShiftingLogic_Y;
 
   // Root inport: '<Root>/Shift Up request' set method
   void setShift_Up_request(uint8_T localArgInput);
@@ -221,12 +217,15 @@ class ShiftingLogic final
 
   // private data and function members
  private:
+  // External outputs
+  ExtY_ShiftingLogic_T ShiftingLogic_Y;
+
   // Block signals
   B_ShiftingLogic_T ShiftingLogic_B;
-
+  public:
   // Block states
   DW_ShiftingLogic_T ShiftingLogic_DW;
-
+  private:
   // Tunable parameters
   static P_ShiftingLogic_T ShiftingLogic_P;
 
@@ -246,27 +245,26 @@ class ShiftingLogic final
 //  MATLAB hilite_system command to trace the generated code back
 //  to the parent model.  For example,
 //
-//  hilite_system('ShifterLogic/ShiftingLogic')    - opens subsystem ShifterLogic/ShiftingLogic
-//  hilite_system('ShifterLogic/ShiftingLogic/Kp') - opens and selects block Kp
+//  hilite_system('ShifterLogic/ShiftingLogic/ShiftingLogic')    - opens subsystem ShifterLogic/ShiftingLogic/ShiftingLogic
+//  hilite_system('ShifterLogic/ShiftingLogic/ShiftingLogic/Kp') - opens and selects block Kp
 //
 //  Here is the system hierarchy for this model
 //
-//  '<Root>' : 'ShifterLogic'
-//  '<S1>'   : 'ShifterLogic/ShiftingLogic'
-//  '<S2>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic'
-//  '<S3>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic'
-//  '<S4>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic'
-//  '<S5>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic/Double Input Prevention'
-//  '<S6>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic/Edge Detection'
-//  '<S7>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic/Edge Detection/Edge Detection'
-//  '<S8>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic/Edge Detection/Edge Detection1'
-//  '<S9>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Double Input Prevention'
-//  '<S10>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Edge Detection'
-//  '<S11>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Gear Limit Check Logic'
-//  '<S12>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Reset'
-//  '<S13>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Edge Detection/Edge Detection'
-//  '<S14>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Edge Detection/Edge Detection1'
-//  '<S15>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Gear Limit Check Logic/Max Gear Limit Logic'
+//  '<Root>' : 'ShifterLogic/ShiftingLogic'
+//  '<S1>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic'
+//  '<S2>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic'
+//  '<S3>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic'
+//  '<S4>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic/Double Input Prevention'
+//  '<S5>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic/Edge Detection'
+//  '<S6>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic/Edge Detection/Edge Detection'
+//  '<S7>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/Max Gear Logic/Edge Detection/Edge Detection1'
+//  '<S8>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Double Input Prevention'
+//  '<S9>'   : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Edge Detection'
+//  '<S10>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Gear Limit Check Logic'
+//  '<S11>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Reset'
+//  '<S12>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Edge Detection/Edge Detection'
+//  '<S13>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Edge Detection/Edge Detection1'
+//  '<S14>'  : 'ShifterLogic/ShiftingLogic/ShiftingLogic/ShiftingLogic/Gear Limit Check Logic/Max Gear Limit Logic'
 
 #endif                                 // RTW_HEADER_ShiftingLogic_h_
 
