@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ShiftingLogic'.
 //
-// Model version                  : 2.0
+// Model version                  : 2.1
 // Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
-// C/C++ source code generated on : Fri Jul  7 00:09:03 2023
+// C/C++ source code generated on : Sat Jul  8 16:35:03 2023
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Atmel->AVR
@@ -82,11 +82,6 @@ ShiftingLogic::P_ShiftingLogic_T ShiftingLogic::ShiftingLogic_P{
 
   // Computed Parameter: Switch_Threshold
   //  Referenced by: '<S11>/Switch'
-
-  0U,
-
-  // Computed Parameter: MaxGearMemory_InitialCondition
-  //  Referenced by: '<S2>/Max Gear Memory'
 
   0U,
 

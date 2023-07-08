@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ShiftingLogic'.
 //
-// Model version                  : 2.0
+// Model version                  : 2.1
 // Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
-// C/C++ source code generated on : Fri Jul  7 00:09:03 2023
+// C/C++ source code generated on : Sat Jul  8 16:35:03 2023
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Atmel->AVR
@@ -310,8 +310,7 @@ void ShiftingLogic::initialize()
   ShiftingLogic_DW.Delay_DSTATE_d = ShiftingLogic_P.Delay_InitialCondition_h;
 
   // InitializeConditions for Delay: '<S2>/Max Gear Memory'
-  ShiftingLogic_DW.MaxGearMemory_DSTATE =
-    ShiftingLogic_P.MaxGearMemory_InitialCondition;
+  ShiftingLogic_DW.MaxGearMemory_DSTATE = ((uint8_T)InitMaxGear);
 
   // SystemInitialize for Atomic SubSystem: '<S1>/ShiftingLogic'
   // InitializeConditions for Delay: '<S12>/Delay'

@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ShiftingLogic'.
 //
-// Model version                  : 2.0
+// Model version                  : 2.1
 // Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
-// C/C++ source code generated on : Fri Jul  7 00:09:03 2023
+// C/C++ source code generated on : Sat Jul  8 16:35:03 2023
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Atmel->AVR
@@ -19,7 +19,6 @@
 #ifndef RTW_HEADER_ShiftingLogic_h_
 #define RTW_HEADER_ShiftingLogic_h_
 #include "rtwtypes.h"
-
 #include "ShiftingLogic_types.h"
 
 // Macros for accessing real-time model data structure
@@ -30,6 +29,11 @@
 #ifndef rtmSetErrorStatus
 #define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
 #endif
+
+// Exported data define
+
+// Definition for custom storage class: Define
+#define InitMaxGear                    6U                        // Referenced by: '<S2>/Max Gear Memory' 
 
 // Class declaration for model ShiftingLogic
 class ShiftingLogic final
@@ -147,10 +151,6 @@ class ShiftingLogic final
     uint8_T Switch_Threshold;          // Computed Parameter: Switch_Threshold
                                           //  Referenced by: '<S11>/Switch'
 
-    uint8_T MaxGearMemory_InitialCondition;
-                           // Computed Parameter: MaxGearMemory_InitialCondition
-                              //  Referenced by: '<S2>/Max Gear Memory'
-
     uint8_T Saturation_UpperSat;      // Computed Parameter: Saturation_UpperSat
                                          //  Referenced by: '<S2>/Saturation'
 
@@ -222,10 +222,10 @@ class ShiftingLogic final
 
   // Block signals
   B_ShiftingLogic_T ShiftingLogic_B;
-  public:
+
   // Block states
   DW_ShiftingLogic_T ShiftingLogic_DW;
-  private:
+
   // Tunable parameters
   static P_ShiftingLogic_T ShiftingLogic_P;
 
