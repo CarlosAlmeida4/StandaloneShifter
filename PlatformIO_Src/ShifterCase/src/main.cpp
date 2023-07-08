@@ -35,12 +35,15 @@ void Task1MS()
 {
   IOinput_obj.FastCyclic();
   //ShiftingLogic_Obj.setMax_Gear_Limit(MAXGEARDEFAULT_VALUE);
-  ShiftingLogic_Obj.setMax_Gear_UP(IOinput_obj.IOInputs_MaxGearLimit.MaxGearUpPin);
-  ShiftingLogic_Obj.setMax_Gear_Down(IOinput_obj.IOInputs_MaxGearLimit.MaxGearDownPin);
+  ShiftingLogic_Obj.setMax_Gear_UP(IOinput_obj.IOInputs_MaxGearLimit.MaxGearLimitUp);
+  ShiftingLogic_Obj.setMax_Gear_Down(IOinput_obj.IOInputs_MaxGearLimit.MaxGearLimitDown);
   ShiftingLogic_Obj.setReset_Count(IOinput_obj.IOInputs_ResetCount.ResetCount);
   ShiftingLogic_Obj.setShift_Down_request(IOinput_obj.IOInputs_ShiftDownRequest.ShiftDownRequest);
   ShiftingLogic_Obj.setShift_Up_request(IOinput_obj.IOInputs_ShiftUpRequest.ShiftUpRequest);
   ShiftingLogic_Obj.step();
-  Serial.println(ShiftingLogic_Obj.ShiftingLogic_DW.MaxGearMemory_DSTATE);
+  //Serial.print("Current Gear: ");
   //Serial.println(ShiftingLogic_Obj.getCurrent_Gear());
+  //Serial.print("Max Gear: ");
+  //Serial.println(ShiftingLogic_Obj.ShiftingLogic_DW.MaxGearMemory_DSTATE);
+  
 }
