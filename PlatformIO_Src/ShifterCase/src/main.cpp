@@ -4,6 +4,7 @@
 #include "IO_inputs\IO_inputs.h"
 #include "TaskScheduler.h"
 #include "ScreenControl\ScreenControl.h"
+#include "IO_output\IO_output.h"
 
 #define TASK1MS_PERIOD 1
 
@@ -11,6 +12,7 @@ Scheduler runner;
 static ShiftingLogic ShiftingLogic_Obj;
 static IOinput IOinput_obj;
 static ScreenControl ScreenControl_Obj;
+static IOoutput IOoutput_obj;
 
 struct Result_ShiftingLogic_T {
   int8_T CurrentGear;                // '<Root>/Current Gear'
@@ -45,6 +47,7 @@ void Task1MS()
   ShiftingLogic_Obj.step();
   ScreenControl_Obj.setInport(ShiftingLogic_Obj.getCurrent_Gear());
   ScreenControl_Obj.step();
+  IOoutput_obj.FastCyclic(ScreenControl_Obj.ScreenControl_Y.Outport);
   //Serial.print("Current Gear: ");
   //Serial.println(ShiftingLogic_Obj.getCurrent_Gear());
   //Serial.print("Max Gear: ");
