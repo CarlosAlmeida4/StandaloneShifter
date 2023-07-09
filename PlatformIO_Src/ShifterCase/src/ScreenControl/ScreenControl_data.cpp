@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ScreenControl'.
 //
-// Model version                  : 1.8
+// Model version                  : 1.10
 // Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
-// C/C++ source code generated on : Sat Jul  8 20:54:50 2023
+// C/C++ source code generated on : Sun Jul  9 17:49:39 2023
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Atmel->AVR

@@ -110,3 +110,13 @@ MDB/slprj/sim/varcache/ScreenControl/tmwinternal/simulink_cache.xml
 MDB/slprj/sim/varcache/ScreenControl/varInfo.mat
 
 MDB/Startup.asv
+
+MDB/slprj/ert/ScreenControl/tmwinternal/binfo.mat
+
+MDB/slprj/ert/ScreenControl/tmwinternal/BlockTraceInfo.mat
+
+MDB/slprj/ert/ScreenControl/tmwinternal/CompileInfo.xml
+
+MDB/slprj/ert/ScreenControl/tmwinternal/minfo.mat
+
+MDB/slprj/ert/ScreenControl/tmwinternal/scv
