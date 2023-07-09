@@ -3,12 +3,14 @@
 #include "ShifterLogic\ShiftingLogic.h"             // Model header file
 #include "IO_inputs\IO_inputs.h"
 #include "TaskScheduler.h"
+#include "ScreenControl\ScreenControl.h"
 
 #define TASK1MS_PERIOD 1
 
 Scheduler runner;
-static ShiftingLogic ShiftingLogic_Obj;// Instance of model class
+static ShiftingLogic ShiftingLogic_Obj;
 static IOinput IOinput_obj;
+static ScreenControl ScreenControl_Obj;
 
 struct Result_ShiftingLogic_T {
   int8_T CurrentGear;                // '<Root>/Current Gear'
@@ -41,6 +43,8 @@ void Task1MS()
   ShiftingLogic_Obj.setShift_Down_request(IOinput_obj.IOInputs_ShiftDownRequest.ShiftDownRequest);
   ShiftingLogic_Obj.setShift_Up_request(IOinput_obj.IOInputs_ShiftUpRequest.ShiftUpRequest);
   ShiftingLogic_Obj.step();
+  ScreenControl_Obj.setInport(ShiftingLogic_Obj.getCurrent_Gear());
+  ScreenControl_Obj.step();
   //Serial.print("Current Gear: ");
   //Serial.println(ShiftingLogic_Obj.getCurrent_Gear());
   //Serial.print("Max Gear: ");
