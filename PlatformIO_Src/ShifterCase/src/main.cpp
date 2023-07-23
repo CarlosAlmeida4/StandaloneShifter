@@ -6,6 +6,8 @@
 #include "ScreenControl\ScreenControl.h"
 #include "IO_output\IO_output.h"
 
+#include "HID-Project.h"
+
 #define TASK1MS_PERIOD 1
 
 Scheduler runner;
@@ -28,6 +30,8 @@ void setup() {
   IOinput_obj.InitInputs();
   runner.startNow();
   Serial.begin(9600);
+
+  Gamepad.begin();
 }
 
 void loop() {
@@ -52,5 +56,16 @@ void Task1MS()
   //Serial.println(ShiftingLogic_Obj.getCurrent_Gear());
   //Serial.print("Max Gear: ");
   //Serial.println(ShiftingLogic_Obj.ShiftingLogic_DW.MaxGearMemory_DSTATE);
+
+  // Press button 1-32
+    static uint8_t count = 0;
+    count++;
+    if (count == 33) {
+      Gamepad.releaseAll();
+      count = 0;
+    }
+    else
+      Gamepad.press(count);
+
   
 }
