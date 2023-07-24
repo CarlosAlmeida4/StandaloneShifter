@@ -6,6 +6,8 @@
 #include "ScreenControl\ScreenControl.h"
 #include "IO_output\IO_output.h"
 
+#include "HID-Project.h"
+
 #define TASK1MS_PERIOD 1
 
 Scheduler runner;
@@ -28,6 +30,7 @@ void setup() {
   IOinput_obj.InitInputs();
   runner.startNow();
   Serial.begin(9600);
+  Keyboard.begin();
 }
 
 void loop() {
@@ -48,9 +51,14 @@ void Task1MS()
   ScreenControl_Obj.setInport(ShiftingLogic_Obj.getCurrent_Gear());
   ScreenControl_Obj.step();
   IOoutput_obj.FastCyclic(ScreenControl_Obj.ScreenControl_Y.Outport);
+  if(IOinput_obj.IOInputs_ShiftUpRequest.ShiftUpRequest)
+  {
+    Keyboard.write('a');
+  }
   //Serial.print("Current Gear: ");
   //Serial.println(ShiftingLogic_Obj.getCurrent_Gear());
   //Serial.print("Max Gear: ");
   //Serial.println(ShiftingLogic_Obj.ShiftingLogic_DW.MaxGearMemory_DSTATE);
   
 }
+
