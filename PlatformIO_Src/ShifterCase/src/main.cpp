@@ -6,15 +6,29 @@
 #include "ScreenControl\ScreenControl.h"
 #include "IO_output\IO_output.h"
 
-#include "HID-Project.h"
+//#include "HID-Project.h"
+#include "Adafruit_TinyUSB.h"
 
 #define TASK1MS_PERIOD 1
+#define USE_TINYUSB
 
 Scheduler runner;
 static ShiftingLogic ShiftingLogic_Obj;
 static IOinput IOinput_obj;
 static ScreenControl ScreenControl_Obj;
 static IOoutput IOoutput_obj;
+
+bool activeState = false;
+
+// HID report descriptor using TinyUSB's template
+uint8_t const desc_keyboard_report[] =
+{
+  TUD_HID_REPORT_DESC_KEYBOARD()
+};
+
+// USB HID object. For ESP32 these values cannot be changed after this declaration
+// desc report, desc len, protocol, interval, use out endpoint
+Adafruit_USBD_HID usb_keyboard(desc_keyboard_report, sizeof(desc_keyboard_report), HID_ITF_PROTOCOL_KEYBOARD, 2, false);
 
 struct Result_ShiftingLogic_T {
   int8_T CurrentGear;                // '<Root>/Current Gear'
@@ -31,7 +45,7 @@ void setup() {
   runner.startNow();
   Serial.begin(9600);
 
-  Gamepad.begin();
+
 }
 
 void loop() {
@@ -56,16 +70,5 @@ void Task1MS()
   //Serial.println(ShiftingLogic_Obj.getCurrent_Gear());
   //Serial.print("Max Gear: ");
   //Serial.println(ShiftingLogic_Obj.ShiftingLogic_DW.MaxGearMemory_DSTATE);
-
-  // Press button 1-32
-    static uint8_t count = 0;
-    count++;
-    if (count == 33) {
-      Gamepad.releaseAll();
-      count = 0;
-    }
-    else
-      Gamepad.press(count);
-
   
 }
