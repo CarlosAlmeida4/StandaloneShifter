@@ -16,6 +16,8 @@ static IOinput IOinput_obj;
 static ScreenControl ScreenControl_Obj;
 static IOoutput IOoutput_obj;
 
+int8_T Old_Gear = 0 ;
+
 struct Result_ShiftingLogic_T {
   int8_T CurrentGear;                // '<Root>/Current Gear'
 };
@@ -31,7 +33,7 @@ void setup() {
   runner.startNow();
   Serial.begin(9600);
 
-  Gamepad.begin();
+  NKROKeyboard.begin();
 }
 
 void loop() {
@@ -56,16 +58,21 @@ void Task1MS()
   //Serial.println(ShiftingLogic_Obj.getCurrent_Gear());
   //Serial.print("Max Gear: ");
   //Serial.println(ShiftingLogic_Obj.ShiftingLogic_DW.MaxGearMemory_DSTATE);
-
-  // Press button 1-32
-    static uint8_t count = 0;
-    count++;
-    if (count == 33) {
-      Gamepad.releaseAll();
-      count = 0;
-    }
-    else
-      Gamepad.press(count);
-
+  if(ShiftingLogic_Obj.getCurrent_Gear()>Old_Gear)
+  {
+    NKROKeyboard.add('u');
+    NKROKeyboard.send();
+    // Release all keys and hit enter
+    NKROKeyboard.releaseAll();
+    Old_Gear = ShiftingLogic_Obj.getCurrent_Gear();
+  }
+  else if(ShiftingLogic_Obj.getCurrent_Gear()<Old_Gear)
+  {
+    NKROKeyboard.add('d');
+    NKROKeyboard.send();
+    // Release all keys and hit enter
+    NKROKeyboard.releaseAll();
+    Old_Gear = ShiftingLogic_Obj.getCurrent_Gear();
+  }
   
 }
