@@ -10,7 +10,6 @@
 #include "Adafruit_TinyUSB.h"
 
 #define TASK1MS_PERIOD 1
-#define USE_TINYUSB
 
 Scheduler runner;
 static ShiftingLogic ShiftingLogic_Obj;
