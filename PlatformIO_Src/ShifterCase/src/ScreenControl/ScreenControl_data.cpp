@@ -23,7 +23,7 @@ const ScreenControl::ConstP_ScreenControl_T ScreenControl_ConstP{
   // Expression: Display2ndGear
   //  Referenced by: '<S1>/Constant'
 
-  { 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0 },
+  { 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0 },
 
   // Expression: Display1stGear
   //  Referenced by: '<S1>/Constant1'

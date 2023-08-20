@@ -6,11 +6,11 @@
 #define LED1PIN 8
 #define LED2PIN 9
 #define LED3PIN 10
-#define LED4PIN 11
+#define LED4PIN 21
 #define LED5PIN 0
 #define LED6PIN 1
 #define LED7PIN 2
-#define LED8PIN 21
+#define LED8PIN 20
 
 #define NLEDS 8
 

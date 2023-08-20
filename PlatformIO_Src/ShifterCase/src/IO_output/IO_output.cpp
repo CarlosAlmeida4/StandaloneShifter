@@ -25,7 +25,7 @@ void IOoutput::FastCyclic(uint8_t outputState [])
 {
     for(int i = 0; i< NLEDS; i++)
     {
-        digitalWrite(IOOutputPin[i],!outputState[i]);
+        digitalWrite(IOOutputPin[i],outputState[i]);
 
     }
 }
