@@ -14,8 +14,8 @@ void IOinput::InitInputs()
 
     pinMode(IOInputs_MaxGearLimit.MaxGearDownPin,INPUT);
     pinMode(IOInputs_MaxGearLimit.MaxGearUpPin,INPUT);
-    pinMode(IOInputs_ShiftUpRequest.ShiftUpRequestPin,INPUT);
-    pinMode(IOInputs_ShiftDownRequest.ShiftDownRequestPin,INPUT);
+    pinMode(IOInputs_ShiftUpRequest.ShiftUpRequestPin,INPUT_PULLUP);
+    pinMode(IOInputs_ShiftDownRequest.ShiftDownRequestPin,INPUT_PULLUP);
     pinMode(IOInputs_ResetCount.ResetCountPin,INPUT);
 
     IOInputs_ShiftUpRequest.ShiftUpRequest = 0;
@@ -28,8 +28,8 @@ void IOinput::InitInputs()
 
 void IOinput::FastCyclic()
 {
-    IOInputs_ShiftUpRequest.ShiftUpRequest = digitalRead(IOInputs_ShiftUpRequest.ShiftUpRequestPin);
-    IOInputs_ShiftDownRequest.ShiftDownRequest = digitalRead(IOInputs_ShiftDownRequest.ShiftDownRequestPin);
+    IOInputs_ShiftUpRequest.ShiftUpRequest = !digitalRead(IOInputs_ShiftUpRequest.ShiftUpRequestPin);
+    IOInputs_ShiftDownRequest.ShiftDownRequest = !digitalRead(IOInputs_ShiftDownRequest.ShiftDownRequestPin);
     IOInputs_ResetCount.ResetCount = digitalRead(IOInputs_ResetCount.ResetCountPin);
     IOInputs_MaxGearLimit.MaxGearLimitUp = digitalRead(IOInputs_MaxGearLimit.MaxGearUpPin);
     IOInputs_MaxGearLimit.MaxGearLimitDown = digitalRead(IOInputs_MaxGearLimit.MaxGearDownPin);
